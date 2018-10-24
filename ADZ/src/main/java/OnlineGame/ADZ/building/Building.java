@@ -46,4 +46,40 @@ public class Building implements Serializable {
 	@LastModifiedDate
 	private Date updatedAt;
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getBuildingtype() {
+		return buildingtype;
+	}
+
+	public void setBuildingtype(String buildingtype) {
+		this.buildingtype = buildingtype;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
 }

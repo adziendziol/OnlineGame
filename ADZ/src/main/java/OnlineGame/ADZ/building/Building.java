@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,7 +36,9 @@ public class Building implements Serializable {
 	private String description;
 
 	@NotBlank
-	private String buildingtype;
+	@Enumerated(EnumType.STRING)
+	private buildingTypeEnum buildingtype;
+	
 
 	@Column(nullable = false, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
@@ -62,13 +66,6 @@ public class Building implements Serializable {
 		this.description = description;
 	}
 
-	public String getBuildingtype() {
-		return buildingtype;
-	}
-
-	public void setBuildingtype(String buildingtype) {
-		this.buildingtype = buildingtype;
-	}
 
 	public Long getId() {
 		return id;
@@ -80,6 +77,14 @@ public class Building implements Serializable {
 
 	public Date getUpdatedAt() {
 		return updatedAt;
+	}
+
+	public buildingTypeEnum getBuildingtype() {
+		return buildingtype;
+	}
+
+	public void setBuildingtype(buildingTypeEnum buildingtype) {
+		this.buildingtype = buildingtype;
 	}
 
 }

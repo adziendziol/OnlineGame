@@ -20,6 +20,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.sun.istack.internal.NotNull;
+
 @Entity
 @Table(name = "RT_Buildings")
 @EntityListeners(AuditingEntityListener.class)
@@ -35,7 +37,7 @@ public class Building implements Serializable {
 	@NotBlank
 	private String description;
 
-	@NotBlank
+	@NotNull
 	@Enumerated(EnumType.STRING)
 	private buildingTypeEnum buildingtype;
 	

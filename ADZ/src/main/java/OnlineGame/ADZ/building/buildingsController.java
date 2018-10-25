@@ -36,7 +36,7 @@ public class buildingsController {
 
 	@GetMapping("/building")
 	public List<Building> getAllBuildings() {
-		return buildingRepository.findAll();
+		return buildingRepository.findByOrderByIdAsc();
 	}
 
 	// Create a new Building
@@ -61,16 +61,16 @@ public class buildingsController {
 		});
 	}
 	
-	@GetMapping("/building/buildingtypes")
-	public buildingTypeEnum[] getBuildingTypes() {
-		return buildingTypeEnum.values();
-	}
-	
 	// Get a Single Building
 	@GetMapping("/building/{id}")
 	public Building getBuildingById(@PathVariable(value = "id") Long buildingId) {
 		return buildingRepository.findById(buildingId)
 				.orElseThrow(() -> new ResourceNotFoundException("Building", "id", buildingId));
+	}
+
+	@GetMapping("/building/buildingtypes")
+	public buildingTypeEnum[] getBuildingTypes() {
+		return buildingTypeEnum.values();
 	}
 
 }

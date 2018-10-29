@@ -1,0 +1,12 @@
+insert into rt_player (name,email) values('Player1','Player@test.de');
+
+insert into rt_ressources (ressource_type,amount) values ('Eisen',1),('Gas',1),('Gold',1);
+
+INSERT INTO public.rt_buildings (buildingtype,created_at,description,"name",updated_at) VALUES 
+('Rohstoffe','2018-10-29 16:18:10.655','Ist für den Abbau des Rohstoffes Eisen zuständig.','Eisenmine','2018-10-29 16:18:10.655')
+,('Rohstoffe','2018-10-29 16:18:35.764','Ist für den Abbau des Rohstoffes Gold zuständig.','Goldmine','2018-10-29 16:18:35.764')
+,('Rohstoffe','2018-10-29 16:18:51.837','Ist für den Abbau des Rohstoffes Gas zuständig.','Erdgaspumpe','2018-10-29 16:18:51.837')
+,('Produktion','2018-10-29 16:19:29.052','Produziert Treibstoff aus GAS','Raffinerie','2018-10-29 16:19:29.052')
+,('Produktion','2018-10-29 16:19:50.080','Produziert Stahl aus Eisen','Stahlwerk','2018-10-29 16:19:50.080')
+,('Produktion','2018-10-29 16:20:55.995','Produziert Energie in mW/h','Solar-Kraftwerk','2018-10-29 16:20:55.995')
+;

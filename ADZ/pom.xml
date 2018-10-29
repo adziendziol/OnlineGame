@@ -58,11 +58,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>org.liquibase</groupId>
-			<artifactId>liquibase-core</artifactId>
-		</dependency> -->
-	</dependencies>
+		</dependencies>
 
 	<build>
 		<plugins>
@@ -70,8 +66,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- Generating the baseline for liquibase changelog -->
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<configuration>
+					<logging>DEBUG</logging>
+					<propertyFile>src/main/resources/db/liquibase.properties</propertyFile>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

@@ -15,13 +15,12 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import OnlineGame.ADZ.building.buildingTypeEnum;
 import OnlineGame.ADZ.player.Player;
 
 @Entity
 @Table(name = "RT_Ressources")
 @EntityListeners(AuditingEntityListener.class)
-public class RessourceLevel {
+public class RessourceBalance {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,5 +35,37 @@ public class RessourceLevel {
 
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	private ressourceTypeEnum ressourceType;
+	private RessourceTypeEnum ressourceType;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Long amount) {
+		this.amount = amount;
+	}
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
+	public RessourceTypeEnum getRessourceType() {
+		return ressourceType;
+	}
+
+	public void setRessourceType(RessourceTypeEnum ressourceType) {
+		this.ressourceType = ressourceType;
+	}
 }

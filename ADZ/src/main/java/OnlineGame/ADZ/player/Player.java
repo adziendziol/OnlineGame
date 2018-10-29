@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 
-import OnlineGame.ADZ.building.buildingTypeEnum;
+import OnlineGame.ADZ.building.BuildingTypeEnum;
 
 @Entity
 @Table(name = "RT_PLAYER")

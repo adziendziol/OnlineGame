@@ -39,7 +39,7 @@ public class Building implements Serializable {
 
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	private buildingTypeEnum buildingtype;
+	private BuildingTypeEnum buildingtype;
 	
 
 	@Column(nullable = false, updatable = false)
@@ -81,11 +81,11 @@ public class Building implements Serializable {
 		return updatedAt;
 	}
 
-	public buildingTypeEnum getBuildingtype() {
+	public BuildingTypeEnum getBuildingtype() {
 		return buildingtype;
 	}
 
-	public void setBuildingtype(buildingTypeEnum buildingtype) {
+	public void setBuildingtype(BuildingTypeEnum buildingtype) {
 		this.buildingtype = buildingtype;
 	}
 

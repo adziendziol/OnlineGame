@@ -22,14 +22,14 @@ import OnlineGame.ADZ.exceptions.ResourceNotFoundException;
 @RestController
 @CrossOrigin
 @RequestMapping("/api")
-public class buildingsController {
+public class BuildingsController {
 
 	@Autowired
-	buildingRepository buildingRepository;
+	BuildingRepository buildingRepository;
 
 	
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(buildingsController.class, args);
+		SpringApplication.run(BuildingsController.class, args);
 	}
 	
 	// Get Buildings
@@ -69,8 +69,8 @@ public class buildingsController {
 	}
 
 	@GetMapping("/building/buildingtypes")
-	public buildingTypeEnum[] getBuildingTypes() {
-		return buildingTypeEnum.values();
+	public BuildingTypeEnum[] getBuildingTypes() {
+		return BuildingTypeEnum.values();
 	}
 
 }

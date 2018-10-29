@@ -1,6 +1,6 @@
 package OnlineGame.ADZ.ressource;
 
-public enum ressourceTypeEnum {
+public enum RessourceTypeEnum {
 	Eisen,
 	Gas,
 	Gold

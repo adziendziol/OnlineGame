@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface buildingRepository extends JpaRepository<Building, Long> {
+public interface BuildingRepository extends JpaRepository<Building, Long> {
 
 	List<Building> findByOrderByIdAsc();
 	

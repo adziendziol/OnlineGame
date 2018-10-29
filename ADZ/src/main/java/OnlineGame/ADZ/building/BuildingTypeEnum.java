@@ -1,6 +1,6 @@
 package OnlineGame.ADZ.building;
 
-public enum buildingTypeEnum {
+public enum BuildingTypeEnum {
 	Rohstoffe,
 	Produktion,
 	Wissenschaft,
